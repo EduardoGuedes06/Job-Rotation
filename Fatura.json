@@ -57,12 +57,5 @@
 {"dia":"26","mes":"2","faturamento":"2243"},
 {"dia":"27","mes":"2","faturamento":"665"},
 {"dia":"28","mes":"2","faturamento":"876"},
-{"dia":"29","mes":"2","faturamento":"1400"},
-{"dia":"","mes":"","faturamento":""},
-{"dia":"","mes":"","faturamento":""},
-{"dia":"","mes":"","faturamento":""},
-{"dia":"m�s_faturamento","mes":"faturamento_mensal","faturamento":""}
-,
-{"dia":"1","mes":"17851","faturamento":""},
-{"dia":"2","mes":"14897","faturamento":""}
+{"dia":"29","mes":"2","faturamento":"1400"}
 ]

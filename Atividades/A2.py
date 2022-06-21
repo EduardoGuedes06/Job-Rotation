@@ -1,8 +1,6 @@
 
 def f(n):
     
-    
-
     contador = 0
 
     um = 0
