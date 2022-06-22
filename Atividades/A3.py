@@ -4,22 +4,6 @@ from typing import Dict
 d=[]
 m=[]
 f=[]
-mes1_max=0
-mes1_min=99999
-diam1_max=0
-diam1_min=0
-total_mes1=0
-media_mes1=0
-
-
-mes2_max=0
-mes2_min=99999
-diam3_max=0
-diam3_min=0
-total_mes2=0
-media_mes2=0
-
-
 meu_json=open("Fatura.json", encoding='utf-8')
 dados = json.load(meu_json)
 
@@ -34,9 +18,22 @@ def Inserir():
         f.append(i['faturamento'])
         
 
-
 if __name__ == "__main__":
     Inserir()
+    mes1_max=0
+    mes1_min=99999
+    diam1_max=0
+    diam1_min=0
+    total_mes1=0
+    media_mes1=0
+
+
+    mes2_max=0
+    mes2_min=99999
+    diam3_max=0
+    diam3_min=0
+    total_mes2=0
+    media_mes2=0
     fatura=[]
     for element in f:
         if element == '':
@@ -81,12 +78,5 @@ if __name__ == "__main__":
             print("Invalido")
     media_mes1 = (total_mes1/count1)
     media_mes2 = (total_mes2/count2)
-     
-    print(media_mes1)
-    print(media_mes2)
-
-    print(total_mes1)
-    print(total_mes2)
-    
-   
- 
+    print("No Primeiro mes, a fatura minima foi de :",'R${:.2f}'.format(mes1_min),"e a maxima de:",'R${:.2f}'.format(mes1_max),"Tambem obtivemos uma média de :",'R${:.2f}'.format(media_mes1),"e um total de :",'R${:.2f}'.format(total_mes1),)
+    print("\nNo Segundo mes, a fatura minima foi de :",'R${:.2f}'.format(mes2_min),"e a maxima de:",'R${:.2f}'.format(mes2_max),"Tambem obtivemos uma média de :",'R${:.2f}'.format(media_mes2),"e um total de :",'R${:.2f}'.format(total_mes2),)
