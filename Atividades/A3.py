@@ -8,11 +8,17 @@ mes1_max=0
 mes1_min=99999
 diam1_max=0
 diam1_min=0
+total_mes1=0
+media_mes1=0
+
 
 mes2_max=0
 mes2_min=99999
 diam3_max=0
 diam3_min=0
+total_mes2=0
+media_mes2=0
+
 
 meu_json=open("Fatura.json", encoding='utf-8')
 dados = json.load(meu_json)
@@ -39,18 +45,17 @@ if __name__ == "__main__":
             
         else:
             fatura.append(int(element))
-            
+    count1=1
+    count2=1
     for i in range (59):
 
         if m[i]=='1':
             if fatura[i]=='Nulo':
                 pass
             else:
-                
-                
-                
-                
-                
+                total_mes1 = total_mes1 + fatura[i]
+                count1=count1 + 1
+                          
                 if mes1_max < fatura[i]:
                     mes1_max = fatura[i]
                     diam1_max = d[i]
@@ -63,11 +68,9 @@ if __name__ == "__main__":
                 pass
             else:
                 
-                
-                
-           
-                
-                
+                total_mes2 = total_mes2 + fatura[i]
+                count2=count2 + 1
+            
                 if mes2_max < fatura[i]:
                     mes2_max = fatura[i]
                     diam2_max = d[i] 
@@ -76,12 +79,14 @@ if __name__ == "__main__":
                     diam2_max = d[i]       
         else:
             print("Invalido")
-
+    media_mes1 = (total_mes1/count1)
+    media_mes2 = (total_mes2/count2)
      
+    print(media_mes1)
+    print(media_mes2)
 
-
-                
-                
+    print(total_mes1)
+    print(total_mes2)
     
    
  
