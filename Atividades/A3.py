@@ -5,9 +5,14 @@ d=[]
 m=[]
 f=[]
 mes1_max=0
+mes1_min=99999
+diam1_max=0
+diam1_min=0
+
 mes2_max=0
-
-
+mes2_min=99999
+diam3_max=0
+diam3_min=0
 
 meu_json=open("Fatura.json", encoding='utf-8')
 dados = json.load(meu_json)
@@ -21,7 +26,7 @@ def Inserir():
         m.append(i['mes'])
         d.append(i["dia"])
         f.append(i['faturamento'])
-  
+        
 
 
 if __name__ == "__main__":
@@ -34,31 +39,49 @@ if __name__ == "__main__":
             
         else:
             fatura.append(int(element))
-            print(fatura)
-    
+            
     for i in range (59):
-        
-        if fatura[i] == int:  
-            print()
-            if m[1]:      
-                   
-                        
-                if fatura[i] > mes1_max:
-                    mes1_max = fatura[i]
-                    print(mes1_max)
-                    print("\nFatura do mes 1, dia",d[i],":",fatura[i])
 
-            if m[2]:     
-                   
-                   
-                        
-                if fatura[i] > mes2_max:
+        if m[i]=='1':
+            if fatura[i]=='Nulo':
+                pass
+            else:
+                
+                
+                
+                
+                
+                if mes1_max < fatura[i]:
+                    mes1_max = fatura[i]
+                    diam1_max = d[i]
+                if   mes1_min > fatura[i]:
+                    mes1_min = fatura[i]
+                    diam1_min = d[i]   
+                
+        elif m[i]=='2':
+            if fatura[i]=='Nulo':
+                pass
+            else:
+                
+                
+                
+           
+                
+                
+                if mes2_max < fatura[i]:
                     mes2_max = fatura[i]
+                    diam2_max = d[i] 
+                if  mes2_min > fatura[i]:
+                    mes2_min = fatura[i]
+                    diam2_max = d[i]       
+        else:
+            print("Invalido")
+
      
 
 
                 
                 
-        else: fatura[i] == 'Nulo'
+    
    
  
